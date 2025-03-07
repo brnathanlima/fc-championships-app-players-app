@@ -35,8 +35,8 @@ spec:
           - path: {{ .path }}
             pathType: Prefix
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: {{ $svcPort }}
+              serviceName: players
+              servicePort: 9999
           {{- end }}
     {{- end }}
   {{- end }}

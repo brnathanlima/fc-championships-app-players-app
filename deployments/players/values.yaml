@@ -11,8 +11,8 @@ image:
   tag: "latest"
 
 imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
+nameOverride: "players"
+fullnameOverride: "players"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -25,10 +25,12 @@ serviceAccount:
 
 podAnnotations: {}
 
-podSecurityContext: {}
+podSecurityContext:
+  {}
   # fsGroup: 2000
 
-securityContext: {}
+securityContext:
+  {}
   # capabilities:
   #   drop:
   #   - ALL
@@ -53,17 +55,17 @@ ingress:
 #          serviceName: players
 #          servicePort: 9999
 #  tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
+#  - secretName: chart-example-tls
+#    hosts:
+#      - chart-example.local
 
 resources:
-   limits:
-     cpu: 20m
-     memory: 10Mi
-   requests:
-     cpu: 10m
-     memory: 5Mi
+  limits:
+    cpu: 20m
+    memory: 10Mi
+  requests:
+    cpu: 10m
+    memory: 5Mi
 
 autoscaling:
   enabled: false

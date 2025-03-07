@@ -1,8 +1,6 @@
 {{- if .Values.kong.enabled -}}
 apiVersion: configuration.konghq.com/v1
 kind: KongIngress
-metadata:
-  name: do-not-preserve-host
 route:
   preserve_host: false
 upstream:
